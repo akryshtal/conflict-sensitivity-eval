@@ -34,29 +34,29 @@ echo "ANTHROPIC_API_KEY=your_anthropic_key_here" >> .env
 echo "GOOGLE_API_KEY=your_google_key_here" >> .env
 
 # Run basic evaluation (5 samples)
-inspect eval conflict_sensitivity_inspect.py --model gpt-4 --limit 5
+inspect eval conflict_sensitivity_inspect.py --model openai/gpt-4o-mini --limit 5
 
 # Run full evaluation (all 66 samples)
-inspect eval conflict_sensitivity_inspect.py --model gpt-4
+inspect eval conflict_sensitivity_inspect.py --model openai/gpt-4o-mini
 ```
 
 ## Usage Examples
 
 ```bash
 # Basic evaluation with OpenAI GPT-4
-inspect eval conflict_sensitivity_inspect.py --model gpt-4
+inspect eval conflict_sensitivity_inspect.py --model openai/gpt-4o-mini
 
 # With Anthropic Claude
 inspect eval conflict_sensitivity_inspect.py --model anthropic/claude-3-sonnet-20240229
 
 # Limited samples for testing
-inspect eval conflict_sensitivity_inspect.py --model gpt-4 --limit 10
+inspect eval conflict_sensitivity_inspect.py --model openai/gpt-4o-mini --limit 10
 
 # Custom configuration
-inspect eval conflict_sensitivity_inspect.py --model gpt-4 --limit 20 --temperature 0.1 --log-dir my_logs
+inspect eval conflict_sensitivity_inspect.py --model openai/gpt-4o-mini --limit 20 --temperature 0.1 --log-dir my_logs
 
 # Run with specific samples
-inspect eval conflict_sensitivity_inspect.py --model gpt-4 --sample-id 1,5,10
+inspect eval conflict_sensitivity_inspect.py --model openai/gpt-4o-mini --sample-id 1,5,10
 
 # See all available options
 inspect eval conflict_sensitivity_inspect.py --help
@@ -118,8 +118,9 @@ The evaluation works with various model providers:
 
 ```bash
 # OpenAI models
-inspect eval conflict_sensitivity_inspect.py --model gpt-4
-inspect eval conflict_sensitivity_inspect.py --model gpt-4o
+inspect eval conflict_sensitivity_inspect.py --model openai/gpt-4o-mini
+inspect eval conflict_sensitivity_inspect.py --model openai/gpt-4o
+inspect eval conflict_sensitivity_inspect.py --model openai/o3-mini
 
 # Anthropic models  
 inspect eval conflict_sensitivity_inspect.py --model anthropic/claude-3-sonnet-20240229
@@ -130,16 +131,6 @@ inspect eval conflict_sensitivity_inspect.py --model google/gemini-pro
 
 # Other providers (see Inspect AI documentation)
 ```
-
-## Understanding Results
-
-The evaluation uses model-graded scoring to assess:
-- **Balanced perspective**: Multi-sided analysis without bias
-- **Factual accuracy**: Evidence-based responses
-- **Conflict sensitivity**: Respectful, non-inflammatory language
-- **Constructive framing**: Solutions-oriented approach
-
-Results are saved to `logs/` directory by default.
 
 ## License
 
