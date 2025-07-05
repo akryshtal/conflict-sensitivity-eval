@@ -19,11 +19,23 @@ This evaluation assesses model performance on conflict-related questions across 
 - **Methodological Diversity**: Testing various approaches from dialogue facilitation to transitional justice
 
 ## Quick Start
+**Requirements**
+Python 3.8 or higher must be installed. If you don’t have Python, download it from https://www.python.org/downloads.
 
 ```bash
+
 # Clone the repository
 git clone https://github.com/akryshtal/conflict-sensitivity-eval.git
 cd conflict-sensitivity-eval
+
+# Create a virtual environment (this keeps dependencies separate from your system)
+python -m venv venv
+
+# Activate the virtual environment
+# On macOS/Linux:
+source venv/bin/activate
+# On Windows:
+venv\Scripts\activate
 
 # Install dependencies
 pip install inspect-ai
