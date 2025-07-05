@@ -144,7 +144,7 @@ If you use this evaluation in your research, please cite:
 @misc{conflict-sensitivity-eval,
   title={Conflict Sensitivity Evaluation for Large Language Models},
   author={},
-  year={2024},
+  year={2025},
   howpublished={\url{https://github.com/akryshtal/conflict-sensitivity-eval}}
 }
 ```
