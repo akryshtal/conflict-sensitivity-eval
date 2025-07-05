@@ -19,8 +19,11 @@ This evaluation assesses model performance on conflict-related questions across 
 - **Methodological Diversity**: Testing various approaches from dialogue facilitation to transitional justice
 
 ## Quick Start
-**Requirements**
+### Requirements
+
 Python 3.8 or higher must be installed. If you don’t have Python, download it from https://www.python.org/downloads.
+You will need API keys for OpenAI, Anthropic, and Google to run evaluations. Some models may require accounts with access to specific APIs or additional setup.
+This project currently uses inspect-ai as the only required package, but additional dependencies may be needed if you adapt the code or use different models.
 
 ```bash
 
